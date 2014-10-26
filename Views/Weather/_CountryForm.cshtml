@@ -1,0 +1,16 @@
+﻿@model WorkWithWCF.Models.WeatherModel
+@using (Html.BeginForm("GetCities","Weather")) {
+       <fieldset>
+        <legend>Set country</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CountryName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CountryName) 
+        </div>
+        
+        <p>
+         <input type="submit" value="Find cities" />
+        </p>
+    </fieldset>
+} 

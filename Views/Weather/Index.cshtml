@@ -1,0 +1,19 @@
+﻿@model WorkWithWCF.Models.WeatherModel
+@{
+    ViewBag.Title = "Weather";
+}
+
+<h2>Weather</h2>
+
+
+<div>@ViewBag.ErrorMessage</div>
+
+
+@Html.Partial("_CountryForm")
+ 
+@Html.Partial("_CityForm",Model)
+
+@Html.Partial("_WeatherResults",Model)
+     
+
+

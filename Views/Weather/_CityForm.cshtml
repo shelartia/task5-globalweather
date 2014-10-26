@@ -1,0 +1,29 @@
+﻿@model WorkWithWCF.Models.WeatherModel
+@if(Model!=null && Model.Cities.Count>1){
+using (Html.BeginForm("GetWeather", "Weather"))
+{
+       <fieldset>
+        <legend>Set country</legend>
+        <div>@Html.HiddenFor(model => Model.CountryName )</div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CityName)
+        </div>
+        <div class="editor-field">
+             @Html.DropDownListFor(model => model.CityName, Model.Cities)
+        </div>
+        
+        <p>
+         <input type="submit" value="Get weather" />
+        </p>
+    </fieldset>
+} 
+}
+@if (Model != null && Model.Cities.Count == 1)
+{
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CityName)
+        </div>
+        <div class="editor-field">
+             @Html.EditorFor(model => model.CityName)
+        </div>
+}
