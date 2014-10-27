@@ -1,16 +1,16 @@
 ﻿@model WorkWithWCF.Models.WeatherModel
 
-@if (Model != null && !String.IsNullOrEmpty(Model.Wind))
+@if (Model != null && !String.IsNullOrEmpty(Model.Location))
 {
     <div>Weather:</div>
-    <div>@Model.Location</div>
-    <div>@Model.Time</div>
-    <div>@Model.Temperature</div>
-    <div>@Model.DewPoint</div>
-    <div>@Model.SkyConditions</div>
-    <div>@Model.Visibility</div>
-    <div>@Model.Wind</div>
-    <div>@Model.RelativeHumidity</div>
-    <div>@Model.Pressure</div>
+    <div>Location: @Model.Location</div>
+    <div>Time: @Model.Time</div>
+    <div>Temperature: @Model.Temperature</div>
+    <div>DewPoint @Model.DewPoint</div>
+    <div>SkyConditions: @Model.SkyConditions</div>
+    <div>Visibility: @Model.Visibility</div>
+    <div>Wind: @Model.Wind</div>
+    <div>RelativeHumidity: @Model.RelativeHumidity</div>
+    <div>Pressure: @Model.Pressure</div>
     
 }
